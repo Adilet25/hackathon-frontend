@@ -1,11 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Layout from './components/Layout/Layout';
+import {Routes, Route} from 'react-router-dom'
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world</h1>    
+      <Layout>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/login' element={<Login/>}/>
+        </Routes>
+      </Layout>
     </div>
   );
 }
