@@ -9,3 +9,9 @@
     right: 32px;
     top: 8px;
 }
+
+@media (max-width: 600px) {
+    .Search{
+        width: 200px;
+    }
+}
