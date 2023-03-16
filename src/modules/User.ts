@@ -21,14 +21,14 @@ export class User{
     public fetchUser(key:number){
         axios.get("https://jsonplaceholder.typicode.com/users").then((res)=>{
             
-            const newUser =res.data[key]; 
+            const newUser = res.data[key]; 
             this.setId(newUser.id);
             this.setUsername(newUser.username);
             console.log(newUser);
             
             
         })
-        .catch(e=>console.error(e))
+        .catch(e=>console.error(e, key))
         .finally(()=>console.log("succes"))
     }
     

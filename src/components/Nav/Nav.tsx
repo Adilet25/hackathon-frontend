@@ -1,15 +1,18 @@
-import {NavLink} from 'react-router-dom'
+import classes from './Nav.module.scss'
+import LangToggle from '../LangToggle/LangToggle';
+import Search from '../Search/Search';
 import Logo from "../UI/Logo/Logo";
+import TestButton from '../UI/Logo/TestButton';
 
 const Nav = () => {
-    return ( <nav>
+    return ( <nav className={classes.Nav}>
         <Logo/>
-        <ul>
-            <li>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/login">Login</NavLink>
-            </li>
-        </ul>
+        <Search/>
+        <div className={classes.extraNav}>
+        <LangToggle/>
+        <TestButton>Войти</TestButton>
+        <TestButton>Регистрация</TestButton>
+        </div>
     </nav> );
 }
  

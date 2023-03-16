@@ -1,0 +1,26 @@
+@mixin container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  @mixin r-flex-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  @mixin r-flex-evenly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  @mixin r-flex-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @mixin c-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
