@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import classes from "./ProductCard.module.scss";
 import clothe1 from "./assets/Rectangle 4206.png";
 import LikeOn from "./assets/LikeOn.svg";
