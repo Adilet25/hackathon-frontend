@@ -1,15 +1,17 @@
-import {FC} from 'react';
-import Nav from '../Nav/Nav';
+import { FC } from "react";
+import Nav from "../Nav/Nav";
 
 interface LayoutProps {
-    children: any;
+  children: any;
 }
- 
-const Layout: FC<LayoutProps> = ({children}) => {
-    return ( <>
-    <Nav/>
-    {children}
-    </> );
-}
- 
+
+const Layout: FC<LayoutProps> = ({ children }) => {
+  return (
+    <>
+      <Nav />
+      {children}
+    </>
+  );
+};
+
 export default Layout;
