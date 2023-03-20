@@ -1,7 +1,14 @@
+import inpBlock from "./Input.module.scss";
+
 const Input = () => {
   return (
     <div>
-      <input type="text" name="text" pattern="\d+" placeholder=""></input>
+      <input
+        className={inpBlock.Input}
+        type="text"
+        name="text"
+        pattern="\d+"
+        placeholder=""></input>
     </div>
   );
 };
