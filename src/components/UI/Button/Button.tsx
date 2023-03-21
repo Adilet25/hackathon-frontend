@@ -1,9 +1,14 @@
 import btnBlock from "./Button.module.scss";
+import { FC } from "react";
 
-const Button = () => {
+interface ButtonProps {
+  children: any;
+}
+
+const Button: FC<ButtonProps> = ({ children }) => {
   return (
     <div>
-      <button className={btnBlock.Button}>Button</button>
+      <button className={btnBlock.Button}>{children}</button>
     </div>
   );
 };
