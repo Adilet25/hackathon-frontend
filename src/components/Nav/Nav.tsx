@@ -4,15 +4,20 @@ import Search from '../Search/Search';
 import Logo from "../UI/Logo/Logo";
 import TestButton from '../UI/Logo/TestButton';
 import Burger from '../UI/Burger/Burger';
+import { useNavigate } from 'react-router-dom'
 
 const Nav = () => {
+    const navigate = useNavigate()
+
     return ( <nav className={classes.Nav}>
         <Logo/>
         <Search/>
         <div className={classes.extraNav}>
         <LangToggle/>
-        <TestButton>Войти</TestButton>
-        <TestButton>Регистрация</TestButton>
+        {/* <TestButton onClick={() => navigate('/')}>Войти</TestButton> */}
+        <button onClick={() => navigate('/login')}>Войти</button>
+        {/* <TestButton>Регистрация</TestButton> */}
+        <button onClick={() => navigate('/register')}>Регистрация</button>
         </div>
         <Burger/>
     </nav> );

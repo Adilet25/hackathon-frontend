@@ -1,0 +1,67 @@
+.restore {
+    position: absolute;
+    left: 380px;
+    top: 170px;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: capitalize;
+    color: #555757;
+    }
+
+    span {
+    position: absolute;
+    left: 350px;
+    right: 555px;
+    top: 250px;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.005em;
+    color: #4A4A4A;
+    }
+    
+    .input {
+    box-sizing: border-box;
+    position: relative;
+    width: 400px;
+    height: 45px;
+    top: 200px;
+    left: 375px;
+    bottom: 61.93%;
+    border: 0.6px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    }
+    
+    .btn {
+    position: relative;
+    top: 290px;
+    left: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    background: #0C6862;
+    color: #FFFFFF;
+    font-weight: 600;
+    border-radius: 40px;
+    border: none;
+    }
+    
+    .picture {
+    position: absolute;
+    width: 174.04px;
+    height: 206.92px;
+    left: 100px;
+    top: 200px;
+    transform: rotate(-12.19deg);
+    }
+    
+    .picture2 {
+    position: absolute;
+    width: 174.04px;
+    height: 206.92px;
+    left: 950px;
+    top: 350px;
+    transform: rotate(-12.19deg);
+    }

@@ -2,6 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import Restore from "./pages/Restore/Restore";
 import CardList from "./pages/CardList/CardList";
 
 type Props = {};
@@ -23,6 +25,17 @@ const MainRoutes = (props: Props) => {
       element: <CardList />,
       id: 3,
     },
+    {
+      link: "/register",
+      element: <Register />,
+      id: 4,
+    },
+    {
+      link: "/restore",
+      element: <Restore />,
+      id: 5,
+    },
+    
   ];
   return (
     <Routes>
