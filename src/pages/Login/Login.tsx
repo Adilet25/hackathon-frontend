@@ -35,7 +35,7 @@ const Login = () => {
             top: "525px"
         }} 
             src={google} alt="google" className={classes.google}
-        onClick={() => window.open("https://www.google.com")}/>
+            onClick={() => navigate('/gaccount')}/>
         <span className={classes.span3}>Создать аккаунт</span>
       </div>
     </>

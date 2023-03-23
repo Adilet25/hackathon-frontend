@@ -1,5 +1,6 @@
 import classes from "./Register.module.scss";
 import rectangle2 from'../../assets/rectangle2.png';
+import rectangle3 from'../../assets/rectangle3.png';
 
 const Register = () => {
   return (
@@ -14,7 +15,7 @@ const Register = () => {
         </div>
         <button className={classes.btn}>Далее</button>
         <img src={rectangle2} alt="picture" className={classes.picture}/>
-        <img src={rectangle2} alt="picture2" className={classes.picture2}/>
+        <img src={rectangle3} alt="picture3" className={classes.picture3}/>
       </div>
     </>
   )

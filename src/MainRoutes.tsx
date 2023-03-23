@@ -5,6 +5,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Restore from "./pages/Restore/Restore";
 import CardList from "./pages/CardList/CardList";
+import GoogleAccount from "./pages/GoogleAccount/GoogleAccount";
 
 type Props = {};
 
@@ -34,6 +35,11 @@ const MainRoutes = (props: Props) => {
       link: "/restore",
       element: <Restore />,
       id: 5,
+    },
+    {
+      link: "/gaccount",
+      element: <GoogleAccount />,
+      id: 66,
     },
     
   ];
