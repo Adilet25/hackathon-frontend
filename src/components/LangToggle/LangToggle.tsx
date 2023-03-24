@@ -1,7 +1,21 @@
+import dropdownStyled from "../LangToggle/LangToggle.module.scss";
+
 const LangToggle = () => {
-    return ( <div style={{border: "2px solid #000", borderRadius:"50%", padding:"5px 8px"}}>
-        Ru
-    </div> );
-}
- 
+  return (
+    <div className={dropdownStyled.Dropdown}>
+      <div className="dropdown-element" data-lang-code="ru">
+        RU
+      </div>
+
+      <div className="dropdown-element" data-lang-code="en">
+        EN
+      </div>
+
+      <div className="dropdown-element" data-lang-code="kg">
+        KG
+      </div>
+    </div>
+  );
+};
+
 export default LangToggle;
