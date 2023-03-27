@@ -1,7 +1,25 @@
+import { MenuItem, TextField } from "@mui/material";
+import "./index.css";
+import styled from "@emotion/styled";
+
 const LangToggle = () => {
-    return ( <div style={{border: "2px solid #000", borderRadius:"50%", padding:"5px 8px"}}>
-        Ru
-    </div> );
-}
- 
+  return (
+    <div>
+      <TextField
+        className="inputRounded "
+        id="outlined-select-currency"
+        select
+        defaultValue="RU"
+        SelectProps={{ IconComponent: () => null }}>
+        <MenuItem key="ru" value="RU">
+          RU
+        </MenuItem>
+        <MenuItem key="en" value="EN">
+          EN
+        </MenuItem>
+      </TextField>
+    </div>
+  );
+};
+
 export default LangToggle;

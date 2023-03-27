@@ -10,8 +10,10 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Nav />
-      <Sidebar/>
-      {children}
+      <div className="container flex flex-row">
+        <Sidebar />
+        {children}
+      </div>
     </>
   );
 };

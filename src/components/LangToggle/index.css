@@ -1,0 +1,13 @@
+.inputRounded .MuiOutlinedInput-root {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #0a9382;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 22px;
+  padding-right: 22px;
+}

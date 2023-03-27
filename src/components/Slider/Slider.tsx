@@ -37,8 +37,7 @@ const Slider: FC<SliderProps> = () => {
           disableOnInteraction: false,
         }}
         spaceBetween={50}
-        slidesPerView={1.5}
-      >
+        slidesPerView={1.5}>
         {sliderData.map((item) => {
           const owner = users.find((i) => i.id === item.owner);
           console.log(users);
