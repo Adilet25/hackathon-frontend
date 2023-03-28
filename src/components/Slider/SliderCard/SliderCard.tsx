@@ -11,7 +11,7 @@ const SliderCard: FC<SliderCardProps> = ({ data, owner }) => {
   console.log(owner);
 
   return (
-    <div className="flex flex-row border w-card rounded-2xl border-solid border-ourLemonGreen p-5 justify-between   ">
+    <div className="flex flex-row border-2 w-[40rem]  lg:w-[30rem] xl:w-card rounded-2xl border-solid border-ourLemonGreen border-opacity-60 p-5 justify-between   ">
       <div className="">
         <img src={data.image} width="200" className="rounded-2xl" />
       </div>
@@ -30,17 +30,15 @@ const SliderCard: FC<SliderCardProps> = ({ data, owner }) => {
           </div>
           <div className="flex flex-row justify-between">
             <span>Количество</span>
-            <span>{data.owner} шт</span>
+            <span className="text-ourViolet">{data.owner} шт</span>
           </div>
-          <div className=" flex flex-row justify-between">
+          <div className=" flex flex-row justify-between text-our2grey">
             <span>Цена</span>
             <span>{data.price} сом</span>
           </div>
         </div>
-        <div>
-          <button className="bg-ourDarkGreen rounded-xl text-white w-32 h-8">
-            Подробнее
-          </button>
+        <div className="flex justify-end">
+          <button className={classes.button}>Подробнее</button>
         </div>
       </div>
     </div>

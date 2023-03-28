@@ -2,12 +2,13 @@ import axios from "axios";
 import { useEffect } from "react";
 import { api } from "../../api";
 import Slider from "../../components/Slider/Slider";
+import CardList from "../CardList/CardList";
 
 const Home = () => {
   return (
     <div>
-      <h1>Home page</h1>
       <Slider />
+      <CardList />
     </div>
   );
 };

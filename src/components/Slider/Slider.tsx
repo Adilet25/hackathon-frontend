@@ -16,7 +16,7 @@ const Slider: FC<SliderProps> = () => {
       .get(api + "account/")
       .then((res) => {
         setUsers(res.data.results);
-        console.log(res.data.results);
+        console.log(users);
       })
       .catch((e) => console.log(e));
     axios
@@ -30,19 +30,33 @@ const Slider: FC<SliderProps> = () => {
   //   console.log(users);
 
   return (
-    <div>
+    <div className="w-[75vmax]">
+      <h1 className="text-our2grey font-semibold text-lg">Новинки</h1>
       <Swiper
         autoplay={{
           delay: 500,
           disableOnInteraction: false,
         }}
-        spaceBetween={50}
-        slidesPerView={1.5}>
+        breakpoints={{
+          // when window width is >= 640px
+          1024: {
+            width: 1024,
+            slidesPerView: 1.6,
+          },
+          // when window width is >= 768px
+          0: {
+            width: 0,
+            slidesPerView: 1,
+          },
+        }}
+        spaceBetween={0}>
         {sliderData.map((item) => {
           const owner = users.find((i) => i.id === item.owner);
-          console.log(users);
+          const ownerName = users.find((i) => console.log(i));
 
-          console.log(owner, item.owner);
+          console.log(ownerName);
+
+          console.log(item.owner);
 
           return (
             <SwiperSlide key={Math.random() * 1000}>

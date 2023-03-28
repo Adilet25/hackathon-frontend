@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       container: {
         padding: {
-          DEFAULT: "1240px",
+          DEFAULT: "1440px",
           sm: "2rem",
           lg: "4rem",
           xl: "5rem",
@@ -14,14 +14,16 @@ module.exports = {
       },
       colors: {
         ourGrey: "#686869",
+        our2grey: "#565B5B",
         ourLemonGreen: "#0A9382",
         ourDarkGreen: "#0C6862",
+        ourViolet: "#6F4FF2",
       },
       width: {
         vsm: "50vmax",
         logo: "9vmax",
         btn: "7vmax",
-        card: "35vmax",
+        card: "35rem",
       },
       height: {
         btn: "3vmax",
