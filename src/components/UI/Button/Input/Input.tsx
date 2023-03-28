@@ -1,6 +1,11 @@
 import inpBlock from "./Input.module.scss";
+import { FC } from "react";
 
-const Input = () => {
+interface InputProps {
+  children: any;
+}
+
+const Input: FC<InputProps> = ({ children }) => {
   return (
     <div>
       <input
@@ -8,7 +13,9 @@ const Input = () => {
         type="text"
         name="text"
         pattern="\d+"
-        placeholder=""></input>
+        placeholder="">
+        {children}
+      </input>
     </div>
   );
 };

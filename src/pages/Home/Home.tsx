@@ -1,3 +1,6 @@
+import Footer from "../../components/Footer/Footer";
+import { Pagination } from "../../components/UI/Pagination/Pagination";
+
 import axios from "axios";
 import { useEffect } from "react";
 import { api } from "../../api";
@@ -9,6 +12,13 @@ const Home = () => {
     <div>
       <Slider />
       <CardList />
+      <Footer></Footer>
+      <Pagination
+        currentPage={0}
+        onChangePage={function (page: number): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
     </div>
   );
 };

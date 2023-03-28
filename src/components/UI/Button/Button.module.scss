@@ -12,12 +12,14 @@
 }
 
 .Button:hover {
+  letter-spacing: 3px;
   background-color: #0c6862;
   color: hsl(0, 0%, 100%);
   box-shadow: #0c6862;
 }
 
 .Button:active {
+  letter-spacing: 3px;
   background-color: #0c6862;
   color: hsl(0, 0%, 100%);
   box-shadow: #0c6862;
