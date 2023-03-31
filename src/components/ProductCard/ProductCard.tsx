@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { FC, useState, useEffect } from "react";
 import classes from "./ProductCard.module.scss";
 import clothe1 from "./assets/Rectangle 4206.png";
 import LikeOn from "./assets/LikeOn.svg";
@@ -6,9 +6,11 @@ import LikeOff from "./assets/LikeOff.svg";
 import axios from "axios";
 import { api } from "../../api";
 
-type Props = {};
-
-const ProductCard = (props: Props) => {
+interface ProdCardProps {
+  data: any;
+  owner: any;
+}
+const ProductCard: FC<ProdCardProps> = ({ owner, data }) => {
   const [Like, setLike] = useState(false);
 
   return (
@@ -32,14 +34,14 @@ const ProductCard = (props: Props) => {
           />
         )}
       </div>
-      <img src={clothe1} alt="error" />
+      <img src={data.image} className="max-w-[25rem]" alt="error" />
       <div>
-        <h3>Свитшот</h3>
-        <h3>20шт</h3>
+        <h3>{data.title}</h3>
+        <h3>{data.stock == "in_stock" ? "В наличии" : "Нет в наличии"}</h3>
       </div>
       <div>
         <h3>Цена</h3>
-        <h3>500сом</h3>
+        <h3>{data.price}</h3>
       </div>
       <button>Подробнее</button>
     </div>

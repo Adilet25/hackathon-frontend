@@ -6,7 +6,12 @@
   max-width: 1400px;
   margin: 30px auto;
   .extraNav {
+    padding: 0;
+    margin: 0;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     > * {
       margin: 0 20px;
     }

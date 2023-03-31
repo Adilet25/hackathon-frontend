@@ -31,7 +31,7 @@ const Slider: FC<SliderProps> = () => {
 
   return (
     <div className="w-[75vmax]">
-      <h1 className="text-our2grey font-semibold text-lg">Новинки</h1>
+      <h1 className="text-our2grey font-semibold text-lg mb-7">Новинки</h1>
       <Swiper
         autoplay={{
           delay: 500,
@@ -54,9 +54,9 @@ const Slider: FC<SliderProps> = () => {
           const owner = users.find((i) => i.id === item.owner);
           const ownerName = users.find((i) => console.log(i));
 
-          console.log(ownerName);
+          // console.log(owner.avatar);
 
-          console.log(item.owner);
+          console.log(item);
 
           return (
             <SwiperSlide key={Math.random() * 1000}>

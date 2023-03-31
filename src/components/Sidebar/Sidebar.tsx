@@ -7,6 +7,8 @@ import arrow from "../../assets/slidebar/Color.svg";
 
 const Sidebar = () => {
   const [categories, setCategories] = useState<any[]>([]);
+  const [catDeal, setCatDeal] = useState<any[]>([]);
+  const [catDealN, setCatDealN] = useState<any[]>([]);
   const [statusCat, setStatusCat] = useState(false);
   const [statusDeal, setStatusDeal] = useState(false);
 
@@ -15,11 +17,18 @@ const Sidebar = () => {
       setCategories(res.data.results);
       console.log(res.data.results, "dddd");
     });
+    axios.get(api + "deals/").then((res) => {
+      setCatDeal(res.data.results);
+      console.log(res.data.results, "wwgwag");
+      catDeal.map((item) => {
+        setCatDealN(item.deals_category);
+      });
+    });
   }, []);
 
   const navigate = useNavigate();
   return (
-    <div className="w-[15rem] flex flex-col">
+    <div className="w-[15rem] h-[60vmax] flex flex-col">
       <div
         className="flex flex-row items-center mb-4 justify-between cursor-pointer "
         onClick={() => {
@@ -37,11 +46,7 @@ const Sidebar = () => {
           <h1>Главная</h1>
         </div>
       </div>
-      <div
-        className="flex flex-col items-center mb-4 justify-between cursor-pointer "
-        onClick={() => {
-          navigate("/");
-        }}>
+      <div className="flex flex-col items-center mb-4 justify-between cursor-pointer ">
         <div className="flex flex-row justify-between w-[15rem]">
           <svg
             width="28"
@@ -96,25 +101,25 @@ const Sidebar = () => {
             )}
           </div>
         </div>
-        {statusCat ? (
-          <ul>
-            {categories.map((item) => {
-              return (
-                <li key={Math.random()}>
-                  <a href={item.slug}>{item.name}</a>
-                </li>
-              );
-            })}
-          </ul>
-        ) : (
-          <ul></ul>
-        )}
+        <div className="ml-10">
+          {statusCat ? (
+            <ul>
+              {categories.map((item) => {
+                return (
+                  <li
+                    key={Math.random()}
+                    onClick={() => navigate(`${item.slug}`)}>
+                    {item.name}
+                  </li>
+                );
+              })}
+            </ul>
+          ) : (
+            <ul></ul>
+          )}
+        </div>
       </div>
-      <div
-        className="flex flex-col items-center mb-4 justify-between cursor-pointer "
-        onClick={() => {
-          navigate("/");
-        }}>
+      <div className="flex flex-col items-center mb-4 justify-between cursor-pointer ">
         <div className="flex flex-row justify-between w-[15rem]">
           <svg
             width="27"
@@ -214,20 +219,25 @@ const Sidebar = () => {
             )}
           </div>
         </div>
+        <div className="ml-10">
+          {statusDeal ? (
+            <ul>
+              {catDealN.map((item) => {
+                console.log(item.name);
 
-        {statusDeal ? (
-          <ul>
-            {categories.map((item) => {
-              return (
-                <li key={Math.random()}>
-                  <a href={item.slug}>{item.name}</a>
-                </li>
-              );
-            })}
-          </ul>
-        ) : (
-          <ul></ul>
-        )}
+                return (
+                  <li
+                    key={Math.random()}
+                    onClick={() => navigate(`${item.slug}`)}>
+                    {item.name}
+                  </li>
+                );
+              })}
+            </ul>
+          ) : (
+            <ul></ul>
+          )}
+        </div>
       </div>
       <div
         className="flex flex-row items-center mb-4 justify-between cursor-pointer "
