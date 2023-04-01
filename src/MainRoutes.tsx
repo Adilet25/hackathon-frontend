@@ -6,6 +6,7 @@ import Login from "./pages/authpages/Login/Login";
 import Register from "./pages/authpages/Register/Register";
 import Restore from "./pages/authpages/Restore/Restore";
 import GoogleAccount from "./pages/authpages/GoogleAccount/GoogleAccount";
+import ProductDetails from "./pages/ProductDetails";
 
 type Props = {};
 
@@ -40,6 +41,11 @@ const MainRoutes = (props: Props) => {
       link: "/gaccount",
       element: <GoogleAccount />,
       id: 6,
+    },
+    {
+      link: "/details/:id",
+      element: <ProductDetails />,
+      id: 7,
     },
   ];
   return (

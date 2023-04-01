@@ -2,9 +2,15 @@ import classes from "./Login.module.scss";
 import rectangle from "../../../assets/rectangle.png";
 import google from "../../../assets/google.png";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useAuth } from "../../../components/context/AuthContextProvider";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const { login, error } = useAuth();
 
   return (
     <>
@@ -13,13 +19,21 @@ const Login = () => {
         <div className="flex flex-row  justify-between mt-10">
           <div className="flex flex-col">
             <div className="flex flex-col ">
-              <h3 className="text-ourLemonGreen font-semibold ">Email</h3>
+              <h3
+                className="text-ourLemonGreen font-semibold"
+                onChange={(e) => setEmail(e.target.value)}>
+                Email
+              </h3>
               <input
                 type="text"
                 className="px-4 py-2 border border-our2grey rounded mb-7"
                 placeholder="Asel_Asylbekova@gmail.com"
               />
-              <h3 className="text-ourLemonGreen font-semibold ">Пароль</h3>
+              <h3
+                className="text-ourLemonGreen font-semibold "
+                onChange={(e) => setPassword(e.target.value)}>
+                Пароль
+              </h3>
               <input
                 type="password"
                 className="px-4 py-2 border border-our2grey rounded mb-7"
@@ -49,7 +63,11 @@ const Login = () => {
                 className="m-5"
                 onClick={() => navigate("/gaccount")}
               />
-              <h1 className="{classes.spa">Создать аккаунт</h1>
+              <h1
+                className="cursor-pointer"
+                onClick={() => login(email, password)}>
+                Создать аккаунт
+              </h1>
             </div>
           </div>
 

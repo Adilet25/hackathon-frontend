@@ -24,9 +24,11 @@ const Register = () => {
     let formData = new FormData();
     formData.append("username", username);
     formData.append("password", password);
-    formData.append("password_confirm", passwordConfirm);
+    formData.append("password2", passwordConfirm);
     formData.append("email", email);
     register(formData, navigate("/login"));
+    navigate("/login");
+    console.log(formData);
   }
 
   return (
@@ -66,11 +68,7 @@ const Register = () => {
             />
 
             <div className="flex items-center">
-              <button
-                className={classes.btn}
-                onClick={() => {
-                  createUser;
-                }}>
+              <button className={classes.btn} onClick={createUser}>
                 Далее
               </button>
             </div>

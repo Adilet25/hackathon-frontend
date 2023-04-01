@@ -16,14 +16,14 @@ const Slider: FC<SliderProps> = () => {
       .get(api + "account/")
       .then((res) => {
         setUsers(res.data.results);
-        console.log(users);
+        // console.log(users);
       })
       .catch((e) => console.log(e));
     axios
       .get(api + "products/")
       .then((res) => {
         setSliderData(res.data.results);
-        console.log(res.data.results);
+        // console.log(res.data.results);
       })
       .catch((e) => console.log(e));
   }, []);
@@ -52,11 +52,11 @@ const Slider: FC<SliderProps> = () => {
         spaceBetween={0}>
         {sliderData.map((item) => {
           const owner = users.find((i) => i.id === item.owner);
-          const ownerName = users.find((i) => console.log(i));
+          // const ownerName = users.find((i) => console.log(i));
 
           // console.log(owner.avatar);
 
-          console.log(item);
+          // console.log(item);
 
           return (
             <SwiperSlide key={Math.random() * 1000}>

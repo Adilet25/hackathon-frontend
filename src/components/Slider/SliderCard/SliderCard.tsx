@@ -8,7 +8,7 @@ interface SliderCardProps {
 }
 
 const SliderCard: FC<SliderCardProps> = ({ data, owner }) => {
-  console.log(owner);
+  // console.log(owner);
   // console.log(owner.avatar);
 
   return (
@@ -18,13 +18,13 @@ const SliderCard: FC<SliderCardProps> = ({ data, owner }) => {
       </div>
       <div className="flex flex-col justify-between w-1/2">
         <div>
-          <img
+          {/* <img
             src={owner.avatar}
             width="30"
             height="30"
             alt={data.title}
             className="rounded-50"
-          />
+          /> */}
           {/* <div
             style={{
               width: "30px",

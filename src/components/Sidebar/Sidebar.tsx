@@ -15,11 +15,11 @@ const Sidebar = () => {
   useEffect(() => {
     axios.get(api + "categories/").then((res) => {
       setCategories(res.data.results);
-      console.log(res.data.results, "dddd");
+      // console.log(res.data.results, "dddd");
     });
     axios.get(api + "deals/").then((res) => {
       setCatDeal(res.data.results);
-      console.log(res.data.results, "wwgwag");
+      // console.log(res.data.results, "wwgwag");
       catDeal.map((item) => {
         setCatDealN(item.deals_category);
       });

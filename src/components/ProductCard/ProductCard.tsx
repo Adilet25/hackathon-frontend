@@ -5,6 +5,7 @@ import LikeOn from "./assets/LikeOn.svg";
 import LikeOff from "./assets/LikeOff.svg";
 import axios from "axios";
 import { api } from "../../api";
+import { useNavigate } from "react-router-dom";
 
 interface ProdCardProps {
   data: any;
@@ -12,6 +13,11 @@ interface ProdCardProps {
 }
 const ProductCard: FC<ProdCardProps> = ({ owner, data }) => {
   const [Like, setLike] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log(data.price);
+  }, []);
 
   return (
     <div className={classes.cardBlock}>
@@ -43,7 +49,9 @@ const ProductCard: FC<ProdCardProps> = ({ owner, data }) => {
         <h3>Цена</h3>
         <h3>{data.price}</h3>
       </div>
-      <button>Подробнее</button>
+      <button onClick={() => navigate(`/details/${data.owner}`)}>
+        Подробнее
+      </button>
     </div>
   );
 };

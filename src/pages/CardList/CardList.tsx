@@ -15,14 +15,14 @@ const CardList = (props: Props) => {
       .get(api + "account/")
       .then((res) => {
         setUsers(res.data.results);
-        console.log(users);
+        // console.log(users);
       })
       .catch((e) => console.log(e));
     axios
       .get(api + "products/")
       .then((res) => {
         setSliderData(res.data.results);
-        console.log(res.data.results);
+        // console.log(res.data.results);
       })
       .catch((e) => console.log(e));
   }, []);
@@ -32,7 +32,7 @@ const CardList = (props: Props) => {
       <div className="grid grid-cols-3 gap-7">
         {sliderData.map((item) => {
           const owner = users.find((i) => i.id === item.owner);
-          const ownerName = users.find((i) => console.log(i));
+          // const ownerName = users.find((i) => console.log(i));
 
           return <ProductCard data={item} owner={owner} />;
         })}
