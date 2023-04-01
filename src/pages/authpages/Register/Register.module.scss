@@ -1,68 +1,62 @@
-.register {
-position: absolute;
-height: 29px;
-left: 480px;
-right: 879px;
-top: 140px;
-font-family: 'Inter';
-font-weight: 600;
-font-size: 24px;
-text-transform: capitalize;
-color: #555757;
-}
+// .register {
+//   height: 29px;
+//   font-family: "Inter";
+//   font-weight: 600;
+//   font-size: 24px;
+//   text-transform: capitalize;
+//   color: #555757;
+// }
 
 .container2 {
-display: flex;
-height: 250px;
-align-items: baseline;
-justify-content: space-around;
-flex-direction: column;
+  display: flex;
+  height: 250px;
+  align-items: baseline;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .input {
-box-sizing: border-box;
-position: relative;
-width: 400px;
-height: 45px;
-top: 100px;
-left: 375px;
-// left: 28.89%;
-// right: 42.01%;
-// top: 31.33%;
-bottom: 61.93%;
-border: 0.6px solid rgba(0, 0, 0, 0.3);
-border-radius: 4px;
+  //   box-sizing: border-box;
+  width: 400px;
+  height: 45px;
+  margin-bottom: 15px;
+  //   top: 100px;
+  //   left: 375px;
+  // left: 28.89%;
+  // right: 42.01%;
+  // top: 31.33%;
+  //   bottom: 61.93%;
+  padding: 10px;
+  border: 0.6px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
 }
 
 .btn {
-position: relative;
-top: 140px;
-left: 405px;
-justify-content: center;
-align-items: center;
-width: 300px;
-height: 50px;
-background: #0C6862;
-color: #FFFFFF;
-font-weight: 600;
-border-radius: 40px;
-border: none;
+  top: 140px;
+  left: 405px;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  background: #0c6862;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 40px;
+  border: none;
 }
 
 .picture {
-position: absolute;
-width: 174.04px;
-height: 206.92px;
-left: 100px;
-top: 200px;
-transform: rotate(-12.19deg);
+  width: 174.04px;
+  height: 206.92px;
+  left: 100px;
+  top: 200px;
+  transform: rotate(-12.19deg);
 }
 
 .picture3 {
-position: absolute;
-width: 174.04px;
-height: 206.92px;
-left: 950px;
-top: 350px;
-transform: rotate(-12.19deg);
+  width: 174.04px;
+  height: 206.92px;
+  left: 950px;
+  top: 350px;
+  transform: rotate(-12.19deg);
 }

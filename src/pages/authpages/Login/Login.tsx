@@ -8,43 +8,55 @@ const Login = () => {
 
   return (
     <>
-      <div className="classes.loginForm">
-        <h1 className={classes.welcome}>Добра пожаловать</h1>
-        <div className={classes.container}>
-          <h3 className={classes.titleEmail}>Email</h3>
-          <input type="text" className={classes.input1} />
-          <h3 className={classes.titlePassword}>Пароль</h3>
-          <input type="password" className={classes.input2} />
-          <input type="checkbox" className={classes.checkbox} />
-          <span className={classes.span}>Запомнить меня</span>
-          <img
-            style={{
-              position: "absolute",
-              top: "20px",
-              left: "680px",
-            }}
-            src={rectangle}
-            alt="picture"
-            className={classes.picture}
-          />
-          <a onClick={() => navigate("/restore")}>Забыли пароль?</a>
+      <div className="flex flex-col justify-center container m-auto">
+        <h1 className="font-bold text-2xl text-ourGrey ">Добро пожаловать</h1>
+        <div className="flex flex-row  justify-between mt-10">
+          <div className="flex flex-col">
+            <div className="flex flex-col ">
+              <h3 className="text-ourLemonGreen font-semibold ">Email</h3>
+              <input
+                type="text"
+                className="px-4 py-2 border border-our2grey rounded mb-7"
+                placeholder="Asel_Asylbekova@gmail.com"
+              />
+              <h3 className="text-ourLemonGreen font-semibold ">Пароль</h3>
+              <input
+                type="password"
+                className="px-4 py-2 border border-our2grey rounded mb-7"
+                placeholder="*********"
+              />
+              <div className="flex flex-row ">
+                <input
+                  type="checkbox"
+                  className="px-4 py-2 border border-our2grey rounded"
+                />
+                <h1 className="{classes.spa">Запомнить меня</h1>
+                <a
+                  className="underline underline-offset-2 cursor-pointer text-[#705491]"
+                  onClick={() => navigate("/restore")}>
+                  Забыли пароль?
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-col items-center">
+              <button className="bg-ourDarkGreen font-semibold text-white h-12 w-10/12 mt-7 rounded-[25px]">
+                Далее
+              </button>
+              <h1 className="mt-7">Или войдите с помощью</h1>
+              <img
+                src={google}
+                alt="google"
+                className="m-5"
+                onClick={() => navigate("/gaccount")}
+              />
+              <h1 className="{classes.spa">Создать аккаунт</h1>
+            </div>
+          </div>
+
+          <div>
+            <img src={rectangle} alt="picture" className="{classes.pic" />
+          </div>
         </div>
-        <button className={classes.btn}>Далее</button>
-        <span className={classes.span2}>Или войдите с помощью</span>
-        <img
-          style={{
-            position: "absolute",
-            width: "24px",
-            height: "24px",
-            left: "350px",
-            top: "525px",
-          }}
-          src={google}
-          alt="google"
-          className={classes.google}
-          onClick={() => navigate("/gaccount")}
-        />
-        <span className={classes.span3}>Создать аккаунт</span>
       </div>
     </>
   );

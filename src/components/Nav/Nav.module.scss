@@ -15,6 +15,22 @@
     > * {
       margin: 0 20px;
     }
+    > button {
+      height: 3rem;
+      padding: 12px 30px;
+      border-radius: 25px;
+      border: none;
+      background-color: #0c6862;
+      color: white;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+    > button:hover {
+      // border: 1px solid black;
+      scale: calc(103%);
+      background-color: #0d6e68;
+      transition: 0.5s;
+    }
   }
 }
 @media (max-width: 600px) {

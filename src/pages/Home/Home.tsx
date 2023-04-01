@@ -10,17 +10,19 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 
 const Home = () => {
   return (
-    <div>
-      <Slider />
-      <CardList />
-      {/* <Pagination
+    <div className="flex flex-row">
+      <Sidebar />
+
+      <div>
+        <Slider />
+        <CardList />
+        {/* <Pagination
         currentPage={0}
         onChangePage={function (page: number): void {
           throw new Error("Function not implemented.");
         }}
       /> */}
-
-      <Footer />
+      </div>
     </div>
   );
 };

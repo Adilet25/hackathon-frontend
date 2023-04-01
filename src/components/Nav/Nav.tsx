@@ -4,9 +4,19 @@ import Search from "../Search/Search";
 import Logo from "../UI/Logo/Logo";
 import Burger from "../UI/Burger/Burger";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContextProvider";
+import React from "react";
 
 const Nav = () => {
   const navigate = useNavigate();
+  const { logout, user, checkAuth } = useAuth();
+
+  React.useEffect(() => {
+    if (localStorage.getItem("token")) {
+      checkAuth();
+    }
+  }, []);
+
   return (
     <nav className={classes.Nav}>
       <div onClick={() => navigate("/")}>
@@ -16,15 +26,11 @@ const Nav = () => {
       <div className={classes.extraNav}>
         <LangToggle />
         {/* <TestButton onClick={() => navigate('/')}>Войти</TestButton> */}
-        <button
-          onClick={() => navigate("/login")}
-          className="text-white bg-ourLemonGreen rounded-3xl px-8 py-3">
+        <button onClick={() => navigate("/login")} className="">
           Войти
         </button>
         {/* <TestButton>Регистрация</TestButton> */}
-        <button
-          onClick={() => navigate("/register")}
-          className="text-white bg-ourLemonGreen rounded-3xl px-8 py-3">
+        <button onClick={() => navigate("/register")} className="">
           Регистрация
         </button>
       </div>
