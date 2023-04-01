@@ -1,18 +1,19 @@
-import './App.scss';
-import Layout from './components/Layout/Layout';
-import {Routes, Route} from 'react-router-dom'
-import Home from './pages/Home/Home';
-import Login from './pages/Login/Login';
+import "./App.scss";
+import AuthContextProvider from "./components/context/AuthContextProvider";
+import Layout from "./components/Layout/Layout";
+import ProductContextProvider from "./components/context/ProductContextProvider";
+import MainRoutes from "./MainRoutes";
 
 function App() {
   return (
     <div className="App">
-      <Layout>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/login' element={<Login/>}/>
-        </Routes>
-      </Layout>
+      <ProductContextProvider>
+        <AuthContextProvider>
+          <Layout>
+            <MainRoutes />
+          </Layout>
+        </AuthContextProvider>
+      </ProductContextProvider>
     </div>
   );
 }
